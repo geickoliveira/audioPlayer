@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MusicPlayer</title>
+    <link href="style.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <div class="container">
+        <audio id="music">
+        <source src="./music/bensound-goinghigher.mp3" type="audio/mpeg">
+        </audio>
+        <div class="controls">
+            <img src="./images/playbtn.png" class="btn" onclick="play()">
+            <img src="./images/pausebtn.png" class="btn" onclick="pause()">
+            <img src="./images/backbtn.png" class="btn" onclick="back()">
+            <img src="./images/nextbtn.png" class="btn" onclick="next()">
+            <img src="./images/volumebtn.png" class="btn" onclick="volume()">
+            <img src="./images/stopbtn.png" class="btn" onclick="stop()">
+
+        </div>
+    </div>    
+    <script src="script.js"></script>
+</body>
+
+</html>
