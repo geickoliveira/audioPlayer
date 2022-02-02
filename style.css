@@ -1,24 +1,69 @@
 body{
     background-image: url("./images/gato.gif");
     background-size: 100vw 100vh;
-
+    background-repeat: no-repeat;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder;
 }
 
 .container{
     position: relative;
     width: 600px;
+    height: 200px;
     margin-top: 50px;
+    margin-left: 25px;
     text-align: center;
+    background-image: linear-gradient(to right, #b8cbb8 0%, #b8cbb8 0%, #b465da 0%, #cf6cc9 33%, #ee609c 66%, #ee609c 100%);
+    border: 3px solid rgb(156, 9, 38);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+.bar{
+    width: 90%;
+    height: 8px;
+    border:2px solid rgb(156, 9, 38);
+    border-radius: 12px;
+    margin-left: 28px;
+    position: absolute;
+    top: 20px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+progress{
+    height: 8px;
+    width: 50%;
+}
+
+.point{
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    margin-left: -2px;
+    background-color: rgb(156, 9, 38);
+}
+
+.time{
+    width: 90%;
+    height: 60px;
+    margin-left: 30px;
+    display: flex;
+    justify-content: space-between;
 }
 
 .controls{
-    width: 100%;
-    background-color: rgb(154, 123, 184);
-    border: 3px solid rgb(156, 9, 38);
-    border-radius: 20px;
+    cursor: pointer;
+
 }
 
 .btn{
     width: 40px;
     padding: 10px;
+    position: relative;
+    top: 40px;
 }

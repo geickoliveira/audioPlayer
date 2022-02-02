@@ -11,19 +11,36 @@
 
 <body>
     <div class="container">
-        <audio id="music">
-        <source src="./music/bensound-goinghigher.mp3" type="audio/mpeg">
-        </audio>
+
+        <div class="duration">
+            <div class="bar">
+                <progress value="0" max="1"></progress>
+                <div class="point">
+
+                </div>
+            </div>
+            <div class="time">
+                <p class="start">0:00</p>
+                <p class="end">3:00</p>
+            </div>
+        </div>
+        
+        <div class="description">
+            
+        </div>
         <div class="controls">
             <img src="./images/playbtn.png" class="btn" onclick="play()">
             <img src="./images/pausebtn.png" class="btn" onclick="pause()">
             <img src="./images/backbtn.png" class="btn" onclick="back()">
             <img src="./images/nextbtn.png" class="btn" onclick="next()">
-            <img src="./images/volumebtn.png" class="btn" onclick="volume()">
             <img src="./images/stopbtn.png" class="btn" onclick="stop()">
-
+            <img src="./images/volumeupbtn.png" class="btn" onclick="volumeup()">
+            <img src="./images/volumedownbtn.png" class="btn" onclick="volumedown()">
+            
         </div>
-    </div>    
+    </div>
+    <audio id="music" src="./music/Elijah Waters - Lose Control.mp3">
+    </audio>
     <script src="script.js"></script>
 </body>
 
