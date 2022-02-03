@@ -10,11 +10,11 @@ let musicDuration= document.querySelector(".end");
 
 let singerAndMusic= document.querySelector("marquee");
 
+let bar= document.getElementById("progress");
+
 let indexMusic= 0;
 
 renderMusic(indexMusic);
-
-musicDuration.textContent= secondsToMin(Math.floor(music.duration));
 
 music.addEventListener("timeupdate", moveBar);
 
@@ -26,12 +26,29 @@ function renderMusic(index){
     });
 }
 
+setInterval(() => {
+    bar.value = music.currentTime;
+    if (Math.floor(music.currentTime) == Math.floor(bar.max)){
+        next();
+    }
+}, 500);
+
+music.onloadedmetadata = function(){            
+    setTimeout(() => {
+        bar.max = music.duration
+    })};
+
+    bar.addEventListener("change", () => {
+        music.currentTime = bar.value;
+    });
+
+
 function moveBar(){
-    let bar= document.getElementById("progress")
-    bar.style.width= Math.floor((music.currentTime / music.duration) * 100) + "%";
+    bar.style.width= "540px";
     let currentTime= document.querySelector(".start");
     currentTime.textContent= secondsToMin(Math.floor(music.currentTime));
 }
+
 
 function secondsToMin(seconds){
     let min= Math.floor(seconds / 60);
@@ -63,7 +80,6 @@ function next(){
     }
     renderMusic(indexMusic);
     music.play();
-
 }
 function stop(){
     music.pause();
