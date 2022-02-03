@@ -4,32 +4,31 @@ body{
     background-repeat: no-repeat;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bolder;
+    color: #eaeaea;
 }
 
 .container{
     position: relative;
     width: 600px;
     height: 200px;
-    margin-top: 50px;
-    margin-left: 25px;
+    margin:auto;
     text-align: center;
     background-image: linear-gradient(to right, #b8cbb8 0%, #b8cbb8 0%, #b465da 0%, #cf6cc9 33%, #ee609c 66%, #ee609c 100%);
-    border: 3px solid rgb(156, 9, 38);
+    border: 3px solid black;
     border-radius: 20px;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    top: 50px;
 
 }
 
 .bar{
     width: 90%;
     height: 8px;
-    border:2px solid rgb(156, 9, 38);
+    border:2px solid black;
     border-radius: 12px;
-    margin-left: 28px;
-    position: absolute;
-    top: 20px;
+    margin:auto;
     display: flex;
     justify-content: start;
     align-items: center;
@@ -37,23 +36,32 @@ body{
 
 progress{
     height: 8px;
-    width: 50%;
+    width: 0%;
 }
 
 .point{
     width: 18px;
     height: 18px;
     border-radius: 50%;
-    margin-left: -2px;
+    margin-left: -10px;
     background-color: rgb(156, 9, 38);
 }
 
 .time{
     width: 90%;
-    height: 60px;
-    margin-left: 30px;
+    height: 30px;
     display: flex;
     justify-content: space-between;
+    margin: auto;
+}
+
+.description{
+    background-color: black;
+    font-size: 2rem;
+    height: 40px;
+    margin:2px auto;
+    border-radius: 8px;
+
 }
 
 .controls{
@@ -65,5 +73,14 @@ progress{
     width: 40px;
     padding: 10px;
     position: relative;
-    top: 40px;
+}
+
+@media screen and (max-width:600px){
+    body, .container{
+        width: auto;
+    }
+    .btn{
+        width: 25px;
+        padding: 5px;
+    }
 }

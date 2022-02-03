@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -14,20 +15,21 @@
 
         <div class="duration">
             <div class="bar">
-                <progress value="0" max="1"></progress>
+                <progress id="progress" value="0" max="1"></progress>
                 <div class="point">
 
                 </div>
             </div>
             <div class="time">
                 <p class="start">0:00</p>
-                <p class="end">3:00</p>
+                <p class="end">0:00</p>
             </div>
         </div>
-        
+
         <div class="description">
-            
+            <marquee>Title</marquee>
         </div>
+
         <div class="controls">
             <img src="./images/playbtn.png" class="btn" onclick="play()">
             <img src="./images/pausebtn.png" class="btn" onclick="pause()">
@@ -36,7 +38,7 @@
             <img src="./images/stopbtn.png" class="btn" onclick="stop()">
             <img src="./images/volumeupbtn.png" class="btn" onclick="volumeup()">
             <img src="./images/volumedownbtn.png" class="btn" onclick="volumedown()">
-            
+
         </div>
     </div>
     <audio id="music" src="./music/Elijah Waters - Lose Control.mp3">
